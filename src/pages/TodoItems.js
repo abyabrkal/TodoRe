@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { __extends } from 'tslib';
+import './index.css';
+
 
 class TodoItems extends Component {
     createTasks(item){
