@@ -48,6 +48,7 @@ class TodoList extends Component{
     render(){
         return(
             <div className="todoListMain">
+                <h1 className="heading">.the TODO app</h1>
                 <div className="header">
                     <form onSubmit={this.addItem}>
                         <input ref={ (a) => this._inputElement = a } 
