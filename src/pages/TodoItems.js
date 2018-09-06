@@ -3,10 +3,20 @@ import './index.css';
 
 
 class TodoItems extends Component {
+    constructor(props){
+        super(props);
+
+        this.createTasks = this.createTasks.bind(this);
+    }
+    
     createTasks(item){
-        return <li key={item.key}>{item.text}</li>
+        return <li onClick={ () => this.deleteTask(item.key) }
+                    key={item.key}>{item.text}</li>
     }
 
+    deleteTask(key){
+        this.props.deleteTask(key);
+    }
 
     render(){
         var todoEntries = this.props.entries;
